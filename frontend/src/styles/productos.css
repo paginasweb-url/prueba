@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(circle at 15% 20%, rgba(6, 182, 212, .28), transparent 32%),
+    radial-gradient(circle at 85% 15%, rgba(37, 99, 235, .35), transparent 35%),
+    radial-gradient(circle at 70% 90%, rgba(124, 58, 237, .30), transparent 35%),
+    linear-gradient(135deg, #06202a 0%, #0f172a 45%, #132b57 100%);
+
+  background-attachment: fixed;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.productos-page {
+  min-height: 100vh;
+  padding: 35px 7%;
+}
+
+/* BOTON VOLVER */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+
+  color: white;
+
+  background: rgba(15, 23, 42, .92);
+
+  padding: 14px 28px;
+  border-radius: 40px;
+
+  font-weight: 800;
+
+  box-shadow: 0 14px 30px rgba(0,0,0,.28);
+
+  transition: .3s;
+}
+
+.back-btn:hover {
+  transform: translateY(-4px);
+  background: #1e293b;
+}
+
+/* HEADER */
+
+.productos-header {
+  text-align: center;
+  margin: 45px 0 60px;
+}
+
+.productos-header h1 {
+  font-size: 64px;
+  margin-bottom: 16px;
+  font-weight: 900;
+
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #67e8f9,
+    #60a5fa
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.productos-header p {
+  font-size: 20px;
+  color: #cbd5e1;
+}
+
+/* GRID */
+
+.libros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  gap: 35px;
+}
+
+/* CARD */
+
+.libro-card {
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  gap: 30px;
+
+  padding: 26px;
+  border-radius: 34px;
+
+  background: rgba(15, 23, 42, .78);
+
+  border: 1px solid rgba(148, 163, 184, .20);
+
+  backdrop-filter: blur(18px);
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,.25),
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+  transition: .4s;
+}
+
+.libro-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 260px;
+  height: 260px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(6,182,212,.35),
+    rgba(37,99,235,.35)
+  );
+
+  border-radius: 50%;
+
+  top: -140px;
+  right: -120px;
+
+  opacity: .6;
+}
+
+.libro-card:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow:
+    0 35px 75px rgba(6,182,212,.18),
+    0 20px 50px rgba(0,0,0,.30);
+}
+
+/* IMAGEN */
+
+.libro-card img {
+  width: 190px;
+  height: 255px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.30);
+
+  transition: .4s;
+}
+
+.libro-card:hover img {
+  transform: rotate(-3deg) scale(1.05);
+}
+
+/* INFO */
+
+.libro-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+.libro-info h2 {
+  margin: 0 0 16px;
+
+  font-size: 36px;
+  line-height: 1.1;
+
+  color: #ffffff;
+}
+
+.libro-info p {
+  color: #cbd5e1;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  margin-bottom: 24px;
+}
+
+.libro-info strong {
+  display: block;
+
+  margin-bottom: 24px;
+
+  font-size: 34px;
+  font-weight: 900;
+
+  color: #22d3ee;
+}
+
+/* BOTON */
+
+.ver-btn {
+  width: fit-content;
+
+  text-decoration: none;
+  color: white;
+
+  font-weight: 900;
+
+  padding: 16px 34px;
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #22c55e,
+      #06b6d4,
+      #2563eb
+    );
+
+  box-shadow:
+    0 18px 35px rgba(37,99,235,.35);
+
+  transition: .3s;
+}
+
+.ver-btn:hover {
+  transform: scale(1.06);
+  box-shadow:
+    0 22px 45px rgba(37,99,235,.45);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .productos-page {
+    padding: 24px;
+  }
+
+  .productos-header h1 {
+    font-size: 46px;
+  }
+
+  .productos-header p {
+    font-size: 17px;
+  }
+
+  .libros-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .libro-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .libro-info {
+    align-items: center;
+  }
+
+  .libro-card img {
+    width: 220px;
+    height: 300px;
+  }
+
+}

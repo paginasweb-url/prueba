@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #0f172a;
+  overflow-x: hidden;
+
+  background:
+    radial-gradient(circle at 10% 10%, rgba(34, 197, 94, .25), transparent 28%),
+    radial-gradient(circle at 90% 20%, rgba(6, 182, 212, .22), transparent 30%),
+    radial-gradient(circle at 70% 90%, rgba(37, 99, 235, .25), transparent 32%),
+    linear-gradient(135deg, #f0fdf4, #eef7ff 45%, #f8fafc);
+}
+
+.pedidos-page {
+  min-height: 100vh;
+  padding: 28px 50px 45px;
+}
+
+.volver-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: max-content;
+  text-decoration: none;
+  color: white;
+  background: #0f172a;
+  padding: 14px 26px;
+  border-radius: 40px;
+  font-weight: 800;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, .22);
+  transition: .3s;
+}
+
+.volver-btn:hover {
+  transform: translateY(-3px);
+  background: #1e293b;
+}
+
+.pedidos-title {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 900;
+  margin: 35px 0 45px;
+  color: #0f172a;
+}
+
+.pedidos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.pedido-card {
+  background: rgba(255, 255, 255, .86);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, .9);
+  border-radius: 34px;
+  padding: 34px;
+  box-shadow: 0 25px 65px rgba(15, 23, 42, .12);
+  position: relative;
+  transition: .3s;
+}
+
+.pedido-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 30px 75px rgba(15, 23, 42, .16);
+}
+
+.pedido-status {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+  color: #166534;
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.pedido-card p {
+  text-align: center;
+  color: #64748b;
+  font-size: 17px;
+  margin-top: 28px;
+}
+
+.pedido-card p strong {
+  color: #334155;
+}
+
+.pedido-libros {
+  margin-top: 28px;
+}
+
+.pedido-libros strong {
+  display: block;
+  text-align: center;
+  margin-bottom: 18px;
+  font-size: 20px;
+  color: #0f172a;
+}
+
+.libro-comprado {
+  background: linear-gradient(135deg, #f8fafc, #edf6ff);
+  padding: 16px 18px;
+  border-radius: 22px;
+  margin-bottom: 13px;
+  text-align: center;
+  border: 1px solid #e2e8f0;
+  transition: .3s;
+}
+
+.libro-comprado:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(15, 23, 42, .08);
+}
+
+.libro-comprado span {
+  display: block;
+  font-weight: 900;
+  font-size: 17px;
+  color: #0f172a;
+}
+
+.libro-comprado small {
+  display: block;
+  margin-top: 5px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.pedido-card h3 {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 900;
+  margin-top: 28px;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #16a34a, #06b6d4, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .pedidos-page {
+    padding: 22px;
+  }
+
+  .pedidos-title {
+    font-size: 42px;
+  }
+
+  .pedidos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pedido-card {
+    padding: 28px 22px;
+  }
+
+  .pedido-card h3 {
+    font-size: 30px;
+  }
+}

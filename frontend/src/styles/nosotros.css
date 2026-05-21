@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f8fffb, #eef9ff);
+  color: #0f172a;
+}
+
+.nosotros-page {
+  min-height: 100vh;
+  padding: 18px 6%;
+}
+
+.back-nosotros {
+  display: inline-block;
+  text-decoration: none;
+  background: #0f172a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.nosotros-hero {
+  max-width: 1180px;
+  margin: 20px auto;
+}
+
+.nosotros-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.nosotros-title span {
+  color: #06b6d4;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.nosotros-title h1 {
+  font-size: 42px;
+  line-height: 1.05;
+  margin: 8px auto;
+  max-width: 780px;
+  background: linear-gradient(135deg, #0f172a, #06b6d4, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nosotros-title p {
+  font-size: 17px;
+  color: #0f766e;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.zigzag {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-card {
+  padding: 22px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .82);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 38px rgba(15, 23, 42, .09);
+  transition: .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.info-card::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  right: -55px;
+  top: -55px;
+  background: linear-gradient(135deg, #22c55e, #06b6d4);
+  border-radius: 50%;
+  opacity: .15;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  background: linear-gradient(135deg, #22c55e, #06b6d4, #2563eb);
+  margin-bottom: 12px;
+}
+
+.info-card h3 {
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+
+.info-card p {
+  font-size: 15px;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
+}
+
+.info-card.left,
+.info-card.right {
+  width: 100%;
+}
+
+@media (max-width: 850px) {
+  .zigzag {
+    grid-template-columns: 1fr;
+  }
+
+  .nosotros-title h1 {
+    font-size: 34px;
+  }
+}

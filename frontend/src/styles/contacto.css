@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(24, 119, 242, .18), transparent 26%),
+    radial-gradient(circle at 90% 30%, rgba(0, 0, 0, .10), transparent 28%),
+    linear-gradient(135deg, #f8fbff, #eef9ff);
+}
+
+.contacto-page {
+  min-height: 100vh;
+  padding: 22px 7%;
+}
+
+.back-contacto {
+  display: inline-block;
+  text-decoration: none;
+  background: #0f172a;
+  color: white;
+  padding: 11px 22px;
+  border-radius: 30px;
+  font-weight: 800;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, .18);
+}
+
+.contacto-container {
+  max-width: 1180px;
+  margin: 28px auto;
+}
+
+.contacto-title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.contacto-title span {
+  color: #06b6d4;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.contacto-title h1 {
+  font-size: 48px;
+  margin: 8px 0;
+  background: linear-gradient(135deg, #0f172a, #1877f2, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contacto-title p {
+  color: #475569;
+  font-size: 17px;
+}
+
+.redes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  justify-content: center;
+  gap: 32px;
+}
+
+.social-card {
+  min-height: 360px;
+  padding: 35px 30px;
+  border-radius: 34px;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: #0f172a;
+
+  background: rgba(255, 255, 255, .78);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, .7);
+
+  box-shadow:
+    0 22px 50px rgba(15, 23, 42, .11),
+    inset 0 1px 0 rgba(255, 255, 255, .8);
+
+  transition: .35s;
+}
+
+.social-card::before {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  top: -90px;
+  right: -90px;
+  border-radius: 50%;
+  opacity: .18;
+}
+
+.social-card::after {
+  content: "↗";
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  font-size: 24px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, .35);
+}
+
+.facebook::before {
+  background: #1877f2;
+}
+
+.tiktok::before {
+  background: linear-gradient(135deg, #000, #ff0050, #00f2ea);
+}
+
+.social-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.facebook:hover {
+  box-shadow: 0 30px 70px rgba(24, 119, 242, .25);
+}
+
+.tiktok:hover {
+  box-shadow: 0 30px 70px rgba(255, 0, 80, .22);
+}
+
+.circle {
+  width: 112px;
+  height: 112px;
+  margin: 10px auto 22px;
+  border-radius: 50%;
+  background: white;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 18px 38px rgba(15, 23, 42, .16);
+}
+
+.circle img {
+  width: 70px;
+  transition: .3s;
+}
+
+.social-card:hover .circle img {
+  transform: scale(1.12) rotate(-5deg);
+}
+
+.social-card h2 {
+  font-size: 34px;
+  margin: 16px 0 10px;
+}
+
+.social-card p {
+  color: #475569;
+  line-height: 1.7;
+  margin: 0 auto 22px;
+  max-width: 260px;
+}
+
+.social-card span {
+  display: inline-block;
+  font-weight: 900;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 28px;
+}
+
+.facebook span {
+  background: linear-gradient(135deg, #1877f2, #06b6d4);
+}
+
+.tiktok span {
+  background: linear-gradient(135deg, #111827, #ff0050);
+}
+
+@media (max-width: 850px) {
+  .redes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-title h1 {
+    font-size: 36px;
+  }
+}
